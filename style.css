@@ -1,9 +1,308 @@
-* {
-    margin: 0;
-    padding: 0;
+.alumni-sans-pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.alumni-sans-pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*  HEADER  */
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 40px;
+}
+
+.menu h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: arial;
+}
+
+.menu h2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.linha { 
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, gray, transparent);
+    top: 70px;
+    position: absolute;
+    left: 0;
+}
+
+header {
+    background-color: black;
+    height: 70px;
+    position: relative;
+}
+
+.hamburguer {
+    width: 20px;
+    height: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#nav-menu {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+
+    width: 220px;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+
+    display: none;
+}
+
+.botao-inicial {
+    width: 90px;
+    height: 90px;
+}
+
+/* Primeira pagina */
+
+.inicio { 
+    height: calc(100vh - 70px);
+    justify-content: center;
+}
+
+main .inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    font-family: "Alumni Sans Pinstripe";
+    color: gray;
+    font-size: 40px;
+    gap: 25px;
+}
+
+.port {
+    color: white;
+    font-family: arial;
+    font-size: 80px;
+    text-shadow: 0 0 6px cyan;
+}
+
+.folio {
+    color: cyan;
+    font-family: arial;
+    font-size: 80px;
+    text-shadow: 0 0 10px cyan;
+}
+
+.bem-vindo {
+    
+    letter-spacing: 5px;
+    color: #888;
+}
+
+.profissao {
+    
+    letter-spacing: 5px;
+    color: #888;
+}
+
+.botao-inicial {
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    display: flex;
+    
+    color: #ccc;
+    font-family: "Alumni Sans Pinstripe";
+    font-size: 20px;
+}
+
+.botao-inicial:hover {
+    color: cyan;
+    border-color: cyan;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* SOBRE MIM */
+
+main .banner { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+main .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre {
+    color: white;
+    font-family: arial;
+    font-size: 60px;
+    text-shadow: 0 0 5px cyan;
+}
+.mim {
+    color: cyan;
+    font-family: arial;
+    font-size: 60px;
+    text-shadow: 0 0 5px cyan;
+}
+
+/* HABILIDADES */
+
+main .habilidades {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sk {
+    color: white;
+    font-size: 60px;
+    font-family: arial;
+    text-shadow: 0 0 6px cyan;
+}
+
+.ills {
+    color: cyan;
+    font-size: 60px;
+    text-shadow: 0 0 6px cyan;
+    font-family: arial;
+}
+
+
+
+/* PROJETOS */
+
+main .projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+}
+
+
+.pro {
+    color: white;
+    font-size: 60px;
+    text-shadow: 0 0 6px cyan;
+    font-family: arial;
+}
+
+.jetos {
+    color: cyan;
+    font-size: 60px;
+    text-shadow: 0 0 6px cyan;
+    font-family: arial;
+}
+
+
+/* CONTATOS */
+
+main .contatos {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.con {
+    color: white;
+    font-size: 60px;
+    text-shadow: 0 0 6px cyan;
+    font-family: arial;
+}
+
+.tatos {
+    color: cyan;
+    font-size: 60px;
+    text-shadow: 0 0 6px cyan;
+    font-family: arial;
+}
 body {
-    height: 100vh;
-    box-sizing: border-box;
+    background: #000;
+    position: relative;
+}
+
+/* Glow suave azul (centro) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(0, 255, 255, 0.08),
+        transparent 60%
+    );
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Vinheta escura nas bordas */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+        circle,
+        transparent 55%,
+        rgba(0, 0, 0, 0.9)
+    );
+
+    pointer-events: none;
+    z-index: 0;
 }

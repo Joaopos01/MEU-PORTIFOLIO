@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
 
         <title> Portfólio | João Pedro - Engenheiro de Software </title>
     </head>
@@ -13,11 +16,16 @@
         <header> 
             <div class="container">
                 <div class="menu">
-                    <h2>
-                        <a href="#aboutme">Portfólio</a>
+                     <h2>
+                        <a href="#">PORTIFÓLIO</a>
                     </h2>
+                    <div class="hamburguer" id="botao-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-                     <nav>
+                     <nav id="nav-menu">
                         <ul>
                             <li><a href="#aboutme">Sobre mim</a></li>
                             <li><a href="#skills">Habilidades</a></li>
@@ -25,21 +33,37 @@
                             <li><a href="#contact">Contatos</a></li>
                         </ul>
                      </nav>
+                     <div class="linha"></div>
                 </div>   
             </div>      
         </header>
 
         
         <main> 
-            <section id="aboutme">
+            <section id="pagina-inicial">
+                <div class="inicio">
+                    <p class="bem-vindo">BEM-VINDO AO MEU</p>
+                    <h1><span class="port">PORT</span><span class="folio">FÓLIO</span></h1>
+                    <p class="profissao">Engenheiro de software</p>
+
+                    <a href="#aboutme" class="botao-inicial">EXPLORAR</a>
+                </div>    
+                        
+            </section>
+
+            <section id="aboutme"> 
                 <div class="container">
                     <div class="banner">
-                        <img src="EU.jpeg" alt="Foto de João Pedro">
-                        <h1>Olá, me chamo João Pedro.</h1>
-                        <p> Engenheiro de software 🚀</p>
+                        <img src="" class="foto-perfil" alt="Foto de João Pedro">
 
+                        
+
+                        
                         <div class="about">
-                            <h2>Sobre mim</h2>
+                            <h2>
+                                <span class="sobre">SOBRE</span>
+                                <span class="mim">MIM</span>
+                            </h2>
                             <p> Engenheiro de Software apaixonado por transformar ideias em soluções reais,
                             com foco em criar aplicações modernas, eficientes e bem estruturadas.
                             Tenho experiência sólida com JavaScript, HTML e CSS,
@@ -51,31 +75,74 @@
             </section>
 
             <section id="skills">
-                <div class="container">
-                    <h2>Habilidades</h2>
+                <div class="container">           
+                    <div class="habilidades">
+                        <h2>
+                           <span class="sk">SK</span>
+                           <span class="ills">ILLS</span>
+                        </h2>
+
+                    <!-- HABILIDADES DE FRONTEND // CARDS -->
+                        <div class="frontend">
+                            <h3>Front-end</h3>  
+                            <div class="cartoes">                        
+                                <div class="carta">HTML5 </div>                               
+                                <div class="carta">CSS3 </div>                             
+                                <div class="carta">JavaScript </div>                               
+                                <div class="carta">TypeScript </div>
+                                <div class="carta">React </div> 
+                            </div> 
+                        </div>
+
+                        <!-- HABILIDADES DE BACKEND // CARDS -->
+                        <div class="backend">
+                            <h3>Back-end</h3>
+                            <div class="cartoes">
+                                <div class="carta">Java</div>
+                                <div class="carta">Spring Boot </div>
+                                <div class="carta">REST API </div>
+                                <div class="carta">SQL </div>
+                                <div class="carta">JPA / Hibernate </div>
+                                <div class="carta">Spring Security </div>
+                                <div class="carta">Git </div>
+                                <div class="carta">Docker </div>
+                                <div class="carta">Postman </div>
+                            </div>
+                         </div>
+                    </div>
                 </div>
 
             </section>
 
             <section id="projects">
                 <div class="container">
-                    <h2>Projetos</h2>
+                    <div class="projetos">
+                        <h2>
+                            <span class="pro">PRO</span>
+                            <span class="jetos">JETOS</span>
+                        </h2>
+                    </div>    
                 </div>
 
             </section>
 
             <section id="contact">
                 <div class="container"> 
-                    <h2>Contatos</h2>
-                        <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-de-oliveira-souza-526a92219/" target="_blank" rel="noopener noreferrer">
-                            <img src="LINKEDIN.png" alt="Link para o Linkedin" width="30">
+                    <div class="contatos">
+                        <h2>
+                           <span class="con">CON</span>
+                           <span class="tatos">TATOS</span>
+                        </h2>
+                            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-de-oliveira-souza-526a92219/" target="_blank" rel="noopener noreferrer">
+                                <img src="LINKEDIN.png" alt="Link para o Linkedin" width="30">
+                            </a>
+                            <a href="https://www.instagram.com/joaopos1/" target="_blank" rel="noopener noreferrer">
+                                <img src="INSTAGRAM.png" alt="Link para o Instagram" width="30">
+                            </a>
+                            <a href="https://github.com/Joaopos01" target="_blank" rel="noopener noreferrer">
+                            <img src="GITHUB.png" alt="Link para o GitHub" width="30">
                         </a>
-                        <a href="https://www.instagram.com/joaopos1/" target="_blank" rel="noopener noreferrer">
-                            <img src="INSTAGRAM.png" alt="Link para o Instagram" width="30">
-                        </a>
-                        <a href="https://github.com/Joaopos01" target="_blank" rel="noopener noreferrer">
-                        <img src="GITHUB.png" alt="Link para o GitHub" width="30">
-                    </a>
+                    </div>    
                 </div>
             </section>
 
@@ -84,9 +151,16 @@
 
         <footer>
             <div class="container">
-                <p>©Copyright by Joaopos</p>
+                <p>FALE COMIGO</p>
             </div>
         </footer>
+
+        <script>
+            if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';}
+            window.onload = function () {
+            window.scrollTo(0, 0);}; 
+        </script>
 
     </body>
 </html>
