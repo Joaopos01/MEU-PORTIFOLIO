@@ -1,3 +1,12 @@
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+
 .alumni-sans-pinstripe-regular {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   font-weight: 400;
@@ -17,6 +26,14 @@
     text-decoration: none;
 }
 
+#pagina-inicial {
+    padding: 0;
+}
+
+section {
+    padding: 100px 20px;
+}
+
 /*  HEADER  */
 .menu {
     position: relative;
@@ -31,7 +48,9 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-family: arial;
+    font-family: roboto;
+    font-size: 20px;
+    letter-spacing: 4px;
 }
 
 .menu h2 a {
@@ -103,8 +122,8 @@ main .inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
-    font-family: "Alumni Sans Pinstripe";
+    background: transparent;
+    font-family: Alumni Sans Pinstripe;
     color: gray;
     font-size: 40px;
     gap: 25px;
@@ -113,14 +132,14 @@ main .inicio {
 .port {
     color: white;
     font-family: arial;
-    font-size: 80px;
+    font-size: 50px;
     text-shadow: 0 0 6px cyan;
 }
 
 .folio {
     color: cyan;
     font-family: arial;
-    font-size: 80px;
+    font-size: 50px;
     text-shadow: 0 0 10px cyan;
 }
 
@@ -131,7 +150,6 @@ main .inicio {
 }
 
 .profissao {
-    
     letter-spacing: 5px;
     color: #888;
 }
@@ -146,7 +164,7 @@ main .inicio {
     display: flex;
     
     color: #ccc;
-    font-family: "Alumni Sans Pinstripe";
+    font-family: Alumni Sans Pinstripe;
     font-size: 20px;
 }
 
@@ -158,23 +176,62 @@ main .inicio {
 
 /* SOBRE MIM */
 
-main .banner { 
+.sobremim h2 {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.about-container {
+    display: flex;
     align-items: center;
-    background-color: black;
+    justify-content: space-between;
+    gap: 40px;
+
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        gap: 200px;
+    }
 }
 
 .foto-perfil {
-    width: 200px;
-    height: 200px;
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
 }
 
-main .about {
+.informaçoes {
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-family: Roboto;
+    gap: 10px;
+
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.label {
+    color: cyan;
+    font-weight: bold;
+}
+
+.value {
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .sobre {
@@ -182,19 +239,37 @@ main .about {
     font-family: arial;
     font-size: 60px;
     text-shadow: 0 0 5px cyan;
+    display: inline-block;
+    animation: leve 6s ease-in-out infinite;
 }
+  
 .mim {
     color: cyan;
     font-family: arial;
     font-size: 60px;
-    text-shadow: 0 0 5px cyan;
+    text-shadow: 0 0 5px cyan; 
+    display: inline-block;
+    animation: leve 6s ease-in-out infinite;
 }
+
+@keyframes leve {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 
 /* HABILIDADES */
 
 main .habilidades {
     display: flex;
-    background-color: black;
+    background: transparent;
     align-items: center;
     flex-direction: column;
 }
@@ -222,7 +297,7 @@ main .projetos {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: black;
+    background: transparent;
 }
 
 
@@ -240,15 +315,95 @@ main .projetos {
     font-family: arial;
 }
 
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.habilidades {
+    gap: 50px;
+}
+
+@media (min-width: 768px) {
+    .habilidades {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 120px;
+    }
+}
+
+.carta {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+.carta:hover {
+    color: cyan;
+    border-color: cyan;
+    box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    transform: translateY(-3px);
+}
+
+.frontend, .backend {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .habilidades {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+    }
+
+    .frontend, .backend {
+        width: 300px;
+    }
+}
+
+.frontend, .backend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: 0.3s;
+}
+
+.frontend:hover, .backend:hover {
+    border-color: cyan;
+    box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+.titulo-back, .titulo-front {
+    color: #00ffff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
 
 /* CONTATOS */
 
-main .contatos {
+#contact .container {
     display: flex;
-    text-align: center;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+}
+
+.titulo-contato {
+    text-align: center;
 }
 
 .con {
@@ -264,45 +419,37 @@ main .contatos {
     text-shadow: 0 0 6px cyan;
     font-family: arial;
 }
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.redes img {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.redes img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px cyan);
+}
+
 body {
-    background: #000;
-    position: relative;
-}
+    margin: 0;
+    padding: 0;
 
-/* Glow suave azul (centro) */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    color: white;
+    font-family: Roboto, sans-serif;
 
-    background: radial-gradient(
-        circle at center,
-        rgba(0, 255, 255, 0.08),
-        transparent 60%
+    background: linear-gradient(
+        180deg,
+        #050505 0%,
+        #0a0a0a 40%,
+        #0d0d0d 70%,
+        #000000 100%
     );
-
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Vinheta escura nas bordas */
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: radial-gradient(
-        circle,
-        transparent 55%,
-        rgba(0, 0, 0, 0.9)
-    );
-
-    pointer-events: none;
-    z-index: 0;
 }
